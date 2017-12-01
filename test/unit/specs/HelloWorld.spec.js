@@ -11,6 +11,8 @@ describe('HelloWorld.vue', () => {
     Constructor.prototype.$store = getStore();
     const vm = new Constructor().$mount()
     expect(vm.$el.querySelector('.hello h1').textContent)
-    .to.equal('Welcome to Your Vue.js App')
+      .to.equal('Welcome to Your Vue.js App')
+    expect(vm.$el.querySelector('.hello h2').textContent)
+      .to.equal(Constructor.prototype.$store.state.appName)
   })
 })

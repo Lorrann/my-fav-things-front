@@ -22,12 +22,11 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: 'HelloWorld',
   computed: {
-    appName(){
-      return this.$store.state.appName;
-    }
+    ...mapState(['appName'])
   },
   data () {
     return {
