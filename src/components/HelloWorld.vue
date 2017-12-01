@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h2>{{appName}}</h2>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -23,6 +24,11 @@
 <script>
 export default {
   name: 'HelloWorld',
+  computed: {
+    appName(){
+      return this.$store.state.appName;
+    }
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
